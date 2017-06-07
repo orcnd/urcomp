@@ -19,5 +19,5 @@ then
         fi
         nohup  "./$execfl" &>/dev/null & 
 else
-        echo "compıled file not found, it might be failed"
+        echo "compiled file not found, it might be failed at compiling"
 fi
