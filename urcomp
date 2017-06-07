@@ -1,0 +1,23 @@
+#!/bin/bash
+
+if [ $# -eq 1 ] 
+then
+        dr=$1
+else
+        dr="${PWD##*/}"
+fi
+
+execfl="$dr.exe"
+urweb "${PWD##*/}" 
+
+if [ -f $execfl ] 
+then
+        tpid=$(lsof -Pnl +M -i6 | grep 8080 | awk '{print $2;}')
+        let tpid+=0
+        if [ $tpid -ne 0 ]; then
+                kill -9 "$tpid" 
+        fi
+        nohup  "./$execfl" &>/dev/null & 
+else
+        echo "compıled file not found, it might be failed"
+fi
