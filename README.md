@@ -30,5 +30,12 @@ because for editors perspective building never ends and you can't start new buil
 
 # how to install
 - copy urcomp file to /usr/bin directory
-- set permissions like this: sudo chmod +x /usr/bin/urcomp
+- set permissions like this: 
+```sh
+sudo chmod +x /usr/bin/urcomp
+```
 
+# how to use 
+- you just need to enter your ur/web code directory and use urcomp command
+- your code must name same as directory name 
+- you can add this command to editors like geany as build command 
