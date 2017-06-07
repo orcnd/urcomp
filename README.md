@@ -6,8 +6,7 @@ ur/web compile and run shortcut for editor
 this app add a command to your linux for compile and run ur/web code.
 this way you can assign this command as build command for editors like geany
 
-works like this
-
+### works like this ###
 first step: 
 compiles your code by using codes directory name. 
 so you have to name your *.ur file same as director name
@@ -30,4 +29,10 @@ it does that in background because compiled app runs like server and never stops
 this doesn't work for editors build command feature. 
 because for editors perspective building never ends and you can't start new build before last one ends
 
-simple but usefull
+
+### how to install ### 
+copy urcomp file to /usr/bin directory
+set permissions like this
+
+sudo chmod +x /usr/bin/urcomp
+
