@@ -12,7 +12,7 @@ urweb "${PWD##*/}"
 
 if [ -f $execfl ] 
 then
-        tpid=$(lsof -Pnl +M -i6 | grep 8080 | awk '{print $2;}')
+        tpid=$(lsof -i -P -n | grep 8080 | awk '{print $2;}')
         let tpid+=0
         if [ $tpid -ne 0 ]; then
                 kill -9 "$tpid" 
